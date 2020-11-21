@@ -9,7 +9,7 @@ const server = net.createServer(conn => { console.log("New Client"); conn.on('da
         if(data.includes("bruh"))
         {
             console.log("YES!!!")
-            conn.write("lmao")
+            conn.write("lmao\n")
         }
 
 
