@@ -5,14 +5,14 @@ const net = require('net');
 const server = net.createServer(conn => { console.log("New Client"); conn.on('data', data => {
         // conn.write();
         console.log("Client: " + data + "\n");
-        switch (data)
-        {
-            case "bruh\n\n":
-                conn.write("lmao");
 
-            default:
-                conn.write("lmaaasdasddas")
-        };
+        if(data.includes("bruh"))
+        {
+            console.log("YES!!!")
+            conn.write("lmao")
+        }
+
+
 
 
     });
