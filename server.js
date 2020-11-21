@@ -1,3 +1,5 @@
+console.log("running some stuff")
+
 const net = require('net');
 
 const server = net.createServer(conn => { console.log("New Client"); conn.on('data', data => {
