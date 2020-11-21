@@ -1,4 +1,4 @@
-console.log("running some stuff")
+
 
 const net = require('net');
 
@@ -7,13 +7,13 @@ const server = net.createServer(conn => { console.log("New Client"); conn.on('da
         console.log("Client: " + data + "\n");
         switch (data)
         {
-            case "bruh":
+            case "bruh\n":
                 conn.write("lmao");
 
             default:
                 conn.write("lmaaasdasddas")
         };
-        
+
 
     });
     conn.on('end', () => {
